@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SconzOpen — Support</title>
+    <style>
+        :root {
+            --ocean: #1A6EED;
+            --bg: #FAFBFC;
+            --card: #FFFFFF;
+            --ink: #1A1A2E;
+            --secondary: #6B7280;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0F0F14;
+                --card: #1C1C24;
+                --ink: #F0F0F5;
+                --secondary: #9CA3AF;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            padding: 24px 16px 64px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--secondary);
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--ocean);
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(26, 110, 237, 0.1);
+            color: var(--ocean);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .card p:last-child { margin-bottom: 0; }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .lang-switch a {
+            color: var(--ocean);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .lang-switch a:hover { background: rgba(26, 110, 237, 0.08); }
+        .lang-switch a.active { background: rgba(26, 110, 237, 0.12); }
+        .contact-btn {
+            display: inline-block;
+            background: var(--ocean);
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 16px;
+            transition: opacity 0.2s;
+        }
+        .contact-btn:hover { opacity: 0.85; }
+        .faq-item {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .faq-item h3 { margin-top: 0; }
+        .faq-item p:last-child { margin-bottom: 0; }
+        .nav-link {
+            color: var(--ocean);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .nav-link:hover { text-decoration: underline; }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: var(--secondary);
+            font-size: 13px;
+        }
+        footer a { color: var(--ocean); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        #en { display: none; }
+    </style>
+    <script>
+        function showLang(lang) {
+            document.getElementById('it').style.display = lang === 'it' ? 'block' : 'none';
+            document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+            document.querySelector('.lang-switch a[data-lang="'+lang+'"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+<div class="lang-switch">
+    <a href="#" data-lang="it" class="active" onclick="showLang('it'); return false;">🇮🇹 Italiano</a>
+    &nbsp;&middot;&nbsp;
+    <a href="#" data-lang="en" onclick="showLang('en'); return false;">🇬🇧 English</a>
+</div>
+
+<!-- ITALIANO -->
+<div id="it">
+<h1>Supporto</h1>
+<p class="subtitle">SconzOpen — Assistenza e domande frequenti</p>
+<span class="badge">📬 Siamo qui per aiutarti</span>
+
+<div class="card">
+<p>Hai bisogno di aiuto con SconzOpen? Consulta le domande frequenti qui sotto oppure scrivici direttamente.</p>
+<a href="mailto:giovanni.orabona@yahoo.com?subject=SconzOpen%20Support" class="contact-btn">✉️ Scrivici</a>
+</div>
+
+<h2>Domande frequenti</h2>
+
+<div class="faq-item">
+<h3>📄 Quali formati di file supporta SconzOpen?</h3>
+<p>SconzOpen apre oltre 40 tipi di file: PDF, immagini (JPEG, PNG, HEIC, TIFF, GIF, BMP, WebP, SVG, ICO), documenti Office (DOCX, XLSX, PPTX, DOC, XLS, PPT), testo (TXT, RTF, CSV, JSON, XML, HTML, CSS, JS, Swift, Python, Markdown), audio, video, archivi ZIP/RAR/7Z, email EML, e il formato nativo .sconz.</p>
+</div>
+
+<div class="faq-item">
+<h3>🔐 Come funziona il Vault Sicuro?</h3>
+<p>Il Vault cifra i tuoi file con AES-256-GCM direttamente sul dispositivo. La chiave è derivata dalla tua password tramite HKDF-SHA256. Puoi anche abilitare Face ID / Touch ID per l'accesso rapido. I file nel Vault non vengono mai sincronizzati con iCloud — restano sempre solo in locale.</p>
+</div>
+
+<div class="faq-item">
+<h3>☁️ Come funziona la sincronizzazione iCloud?</h3>
+<p>Se hai iCloud attivato nelle impostazioni di sistema, i file del tuo Archivio vengono sincronizzati automaticamente tra i tuoi dispositivi tramite Apple CloudKit. Questa sincronizzazione è gestita interamente da Apple. Il Vault, invece, resta sempre solo in locale e non viene mai sincronizzato.</p>
+</div>
+
+<div class="faq-item">
+<h3>🛠️ Quali strumenti PDF sono disponibili?</h3>
+<p>SconzOpen include oltre 20 strumenti: unione, divisione, compressione, rimozione/riorganizzazione pagine, rotazione, conversione immagini↔PDF, OCR, protezione con password, firma, Web→PDF, conversione documenti e audio, e molto altro.</p>
+</div>
+
+<div class="faq-item">
+<h3>📸 Lo scanner funziona senza internet?</h3>
+<p>Sì. Lo Scanner + OCR funziona completamente offline utilizzando il framework Vision di Apple integrato in iOS. Nessuna immagine viene mai trasmessa a server esterni.</p>
+</div>
+
+<div class="faq-item">
+<h3>🗑️ Come elimino i miei dati?</h3>
+<p>Tutti i dati sono sul tuo dispositivo. Per eliminarli, puoi rimuovere i file dall'app oppure disinstallare SconzOpen — iOS cancellerà automaticamente tutti i dati locali. Per i dati iCloud, puoi gestirli da Impostazioni > Apple ID > iCloud.</p>
+</div>
+
+<div class="faq-item">
+<h3>💰 SconzOpen è a pagamento?</h3>
+<p>SconzOpen è disponibile con un acquisto singolo sull'App Store. Nessun abbonamento, nessun acquisto in-app aggiuntivo. Tutti gli strumenti e le funzionalità sono inclusi.</p>
+</div>
+
+<div class="faq-item">
+<h3>🐛 Ho trovato un bug. Come lo segnalo?</h3>
+<p>Scrivici a <strong>giovanni.orabona@yahoo.com</strong> con una descrizione del problema, il modello del tuo iPhone e la versione di iOS. Cercheremo di risolvere il prima possibile!</p>
+</div>
+
+<h2>Contatti</h2>
+<div class="card">
+<p><strong>Email:</strong> giovanni.orabona@yahoo.com</p>
+<p><strong>Sviluppatore:</strong> Giovanni Orabona (OraKit)</p>
+<p>Cerchiamo di rispondere entro 48 ore.</p>
+</div>
+
+<p style="margin-top: 24px;"><a href="privacy.html" class="nav-link">🔒 Leggi la Privacy Policy →</a></p>
+</div>
+
+<!-- ENGLISH -->
+<div id="en">
+<h1>Support</h1>
+<p class="subtitle">SconzOpen — Help and frequently asked questions</p>
+<span class="badge">📬 We're here to help</span>
+
+<div class="card">
+<p>Need help with SconzOpen? Check the FAQ below or contact us directly.</p>
+<a href="mailto:giovanni.orabona@yahoo.com?subject=SconzOpen%20Support" class="contact-btn">✉️ Contact us</a>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<div class="faq-item">
+<h3>📄 What file formats does SconzOpen support?</h3>
+<p>SconzOpen opens over 40 file types: PDF, images (JPEG, PNG, HEIC, TIFF, GIF, BMP, WebP, SVG, ICO), Office documents (DOCX, XLSX, PPTX, DOC, XLS, PPT), text (TXT, RTF, CSV, JSON, XML, HTML, CSS, JS, Swift, Python, Markdown), audio, video, ZIP/RAR/7Z archives, EML email, and the native .sconz format.</p>
+</div>
+
+<div class="faq-item">
+<h3>🔐 How does the Secure Vault work?</h3>
+<p>The Vault encrypts your files with AES-256-GCM directly on your device. The key is derived from your password using HKDF-SHA256. You can also enable Face ID / Touch ID for quick access. Vault files are never synced with iCloud — they always stay local only.</p>
+</div>
+
+<div class="faq-item">
+<h3>☁️ How does iCloud sync work?</h3>
+<p>If you have iCloud enabled in your system settings, your Archive files are automatically synced across your devices through Apple CloudKit. This sync is managed entirely by Apple. The Vault, however, always stays local only and is never synced.</p>
+</div>
+
+<div class="faq-item">
+<h3>🛠️ What PDF tools are available?</h3>
+<p>SconzOpen includes over 20 tools: merge, split, compress, delete/organize pages, rotate, image↔PDF conversion, OCR, password protection, signature, Web→PDF, document and audio conversion, and much more.</p>
+</div>
+
+<div class="faq-item">
+<h3>📸 Does the scanner work without internet?</h3>
+<p>Yes. Scanner + OCR works completely offline using Apple's built-in Vision framework on iOS. No images are ever transmitted to external servers.</p>
+</div>
+
+<div class="faq-item">
+<h3>🗑️ How do I delete my data?</h3>
+<p>All data is on your device. To delete it, you can remove files from the app or uninstall SconzOpen — iOS will automatically delete all local data. For iCloud data, manage it from Settings > Apple ID > iCloud.</p>
+</div>
+
+<div class="faq-item">
+<h3>💰 Is SconzOpen a paid app?</h3>
+<p>SconzOpen is available as a one-time purchase on the App Store. No subscriptions, no additional in-app purchases. All tools and features are included.</p>
+</div>
+
+<div class="faq-item">
+<h3>🐛 I found a bug. How do I report it?</h3>
+<p>Write to us at <strong>giovanni.orabona@yahoo.com</strong> with a description of the issue, your iPhone model, and iOS version. We'll try to fix it as soon as possible!</p>
+</div>
+
+<h2>Contact</h2>
+<div class="card">
+<p><strong>Email:</strong> giovanni.orabona@yahoo.com</p>
+<p><strong>Developer:</strong> Giovanni Orabona (OraKit)</p>
+<p>We aim to respond within 48 hours.</p>
+</div>
+
+<p style="margin-top: 24px;"><a href="privacy.html" class="nav-link">🔒 Read the Privacy Policy →</a></p>
+</div>
+
+<footer>
+    <p>SconzOpen &copy; 2026 Giovanni Orabona (OraKit)</p>
+    <p>Made with ❤️ in Italy</p>
+    <p style="margin-top: 8px;"><a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SconzOpen — Document Utility for iOS</title>
+    <meta name="description" content="SconzOpen: open, convert, and manage 40+ file types on iPhone. PDF tools, Secure Vault, iCloud Archive. Privacy-first, no tracking.">
+    <style>
+        :root {
+            --ocean: #1A6EED;
+            --bg: #FAFBFC;
+            --card: #FFFFFF;
+            --ink: #1A1A2E;
+            --secondary: #6B7280;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0F0F14;
+                --card: #1C1C24;
+                --ink: #F0F0F5;
+                --secondary: #9CA3AF;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            padding: 24px 16px 64px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .tagline {
+            text-align: center;
+            color: var(--secondary);
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--ocean);
+        }
+        p, li {
+            font-size: 15px;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+        .badge {
+            display: block;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .badge span {
+            display: inline-block;
+            background: rgba(26, 110, 237, 0.1);
+            color: var(--ocean);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .card p:last-child { margin-bottom: 0; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .feature-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .feature-card .emoji {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .feature-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .feature-card p {
+            font-size: 13px;
+            color: var(--secondary);
+            margin-bottom: 0;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: var(--ink);
+            transition: box-shadow 0.2s;
+        }
+        .link-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+        .link-card .emoji { font-size: 24px; }
+        .link-card .label {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .link-card .desc {
+            font-size: 13px;
+            color: var(--secondary);
+            margin-bottom: 0;
+        }
+        .app-store-btn {
+            display: block;
+            text-align: center;
+            margin-top: 32px;
+        }
+        .app-store-btn a {
+            display: inline-block;
+            background: var(--ocean);
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .app-store-btn a:hover { opacity: 0.85; }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: var(--secondary);
+            font-size: 13px;
+        }
+        footer a { color: var(--ocean); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<h1>📂 SconzOpen</h1>
+<p class="tagline">The privacy-first document utility for iPhone</p>
+<div class="badge"><span>🔒 No tracking · No ads · No subscriptions</span></div>
+
+<div class="card">
+<p>Open, convert, and manage <strong>40+ file types</strong> on your iPhone. Powerful PDF tools, a Secure Vault with AES-256 encryption, iCloud Archive sync, and a full offline Scanner + OCR — all in one app.</p>
+</div>
+
+<h2>Key Features</h2>
+<div class="feature-grid">
+    <div class="feature-card">
+        <div class="emoji">📄</div>
+        <h3>40+ Formats</h3>
+        <p>PDF, Office, images, audio, video, code, archives</p>
+    </div>
+    <div class="feature-card">
+        <div class="emoji">🛠️</div>
+        <h3>20+ PDF Tools</h3>
+        <p>Merge, split, compress, OCR, sign, protect, convert</p>
+    </div>
+    <div class="feature-card">
+        <div class="emoji">🔐</div>
+        <h3>Secure Vault</h3>
+        <p>AES-256-GCM encryption with Face ID</p>
+    </div>
+    <div class="feature-card">
+        <div class="emoji">☁️</div>
+        <h3>iCloud Archive</h3>
+        <p>Sync files across devices via Apple CloudKit</p>
+    </div>
+    <div class="feature-card">
+        <div class="emoji">📸</div>
+        <h3>Scanner + OCR</h3>
+        <p>Scan documents offline with text recognition</p>
+    </div>
+    <div class="feature-card">
+        <div class="emoji">🔒</div>
+        <h3>Privacy-First</h3>
+        <p>No analytics, no tracking, no third-party SDKs</p>
+    </div>
+</div>
+
+<h2>Links</h2>
+<div class="links">
+    <a href="privacy.html" class="link-card">
+        <span class="emoji">🔒</span>
+        <div>
+            <div class="label">Privacy Policy</div>
+            <p class="desc">How we protect your data (spoiler: we don't collect any)</p>
+        </div>
+    </a>
+    <a href="support.html" class="link-card">
+        <span class="emoji">📬</span>
+        <div>
+            <div class="label">Support</div>
+            <p class="desc">FAQ and contact information</p>
+        </div>
+    </a>
+</div>
+
+<footer>
+    <p>SconzOpen &copy; 2026 Giovanni Orabona (OraKit)</p>
+    <p>Made with ❤️ in Italy</p>
+    <p style="margin-top: 8px;">
+        <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a>
+    </p>
+</footer>
+
+</body>
+</html>
