@@ -1,238 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OraKit — Document Utility for iOS</title>
-    <meta name="description" content="OraKit: open, convert, and manage 40+ file types on iPhone. PDF tools, Secure Vault, iCloud Archive. Privacy-first, local-first file utility.">
-    <style>
-        :root {
-            --ocean: #1A6EED;
-            --bg: #FAFBFC;
-            --card: #FFFFFF;
-            --ink: #1A1A2E;
-            --secondary: #6B7280;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0F0F14;
-                --card: #1C1C24;
-                --ink: #F0F0F5;
-                --secondary: #9CA3AF;
-            }
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            line-height: 1.6;
-            padding: 24px 16px 64px;
-            max-width: 680px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-        .tagline {
-            text-align: center;
-            color: var(--secondary);
-            font-size: 16px;
-            margin-bottom: 32px;
-        }
-        h2 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            color: var(--ocean);
-        }
-        p, li {
-            font-size: 15px;
-            color: var(--ink);
-            margin-bottom: 12px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 16px;
-        }
-        .badge {
-            display: block;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .badge span {
-            display: inline-block;
-            background: rgba(26, 110, 237, 0.1);
-            color: var(--ocean);
-            font-size: 13px;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-        .card {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 16px 0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-        }
-        .card p:last-child { margin-bottom: 0; }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
-        }
-        .feature-card {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-            text-align: center;
-        }
-        .feature-card .emoji {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-        .feature-card h3 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .feature-card p {
-            font-size: 13px;
-            color: var(--secondary);
-            margin-bottom: 0;
-        }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 24px;
-        }
-        .link-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--card);
-            border-radius: 12px;
-            padding: 16px 20px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-            text-decoration: none;
-            color: var(--ink);
-            transition: box-shadow 0.2s;
-        }
-        .link-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
-        .link-card .emoji { font-size: 24px; }
-        .link-card .label {
-            font-size: 15px;
-            font-weight: 600;
-        }
-        .link-card .desc {
-            font-size: 13px;
-            color: var(--secondary);
-            margin-bottom: 0;
-        }
-        .app-store-btn {
-            display: block;
-            text-align: center;
-            margin-top: 32px;
-        }
-        .app-store-btn a {
-            display: inline-block;
-            background: var(--ocean);
-            color: #FFFFFF;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 14px 32px;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .app-store-btn a:hover { opacity: 0.85; }
-        footer {
-            margin-top: 48px;
-            text-align: center;
-            color: var(--secondary);
-            font-size: 13px;
-        }
-        footer a { color: var(--ocean); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>OraKit — Scan, merge and sign PDFs on iPhone</title>
+<meta name="description" content="Scan, merge, compress and sign PDF documents on iPhone. Organize your files and protect private documents in an encrypted Vault. Free download with in-app purchases.">
+<link rel="canonical" href="https://orabona-labs.github.io/orakit-site/">
+<link rel="alternate" hreflang="en" href="https://orabona-labs.github.io/orakit-site/">
+<link rel="alternate" hreflang="it" href="https://orabona-labs.github.io/orakit-site/it/">
+<link rel="alternate" hreflang="x-default" href="https://orabona-labs.github.io/orakit-site/">
+<meta property="og:title" content="OraKit — Scan, merge and sign PDFs on iPhone">
+<meta property="og:description" content="Scan, merge, compress and sign PDF documents on iPhone. Organize your files and protect private documents in an encrypted Vault. Free download with in-app purchases.">
+<meta property="og:url" content="https://orabona-labs.github.io/orakit-site/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-
-<h1>📂 OraKit</h1>
-<p class="tagline">The privacy-first document utility for iPhone</p>
-<div class="badge"><span>🔒 Privacy-first · Local-first · Premium ad removal</span></div>
-
-<div class="card">
-<p>Open, convert, and manage <strong>40+ file types</strong> on your iPhone. Powerful PDF tools, a Secure Vault with AES-256 encryption, iCloud Archive sync, and a full offline Scanner + OCR — all in one app.</p>
-</div>
-
-<h2>Key Features</h2>
-<div class="feature-grid">
-    <div class="feature-card">
-        <div class="emoji">📄</div>
-        <h3>40+ Formats</h3>
-        <p>PDF, Office, images, audio, video, code, archives</p>
-    </div>
-    <div class="feature-card">
-        <div class="emoji">🛠️</div>
-        <h3>20+ PDF Tools</h3>
-        <p>Merge, split, compress, OCR, sign, protect, convert</p>
-    </div>
-    <div class="feature-card">
-        <div class="emoji">🔐</div>
-        <h3>Secure Vault</h3>
-        <p>AES-256-GCM encryption with Face ID</p>
-    </div>
-    <div class="feature-card">
-        <div class="emoji">☁️</div>
-        <h3>iCloud Archive</h3>
-        <p>Sync files across devices via Apple CloudKit</p>
-    </div>
-    <div class="feature-card">
-        <div class="emoji">📸</div>
-        <h3>Scanner + OCR</h3>
-        <p>Scan documents offline with text recognition</p>
-    </div>
-    <div class="feature-card">
-        <div class="emoji">🔒</div>
-        <h3>Privacy-First</h3>
-        <p>No analytics, files stay on-device, ads only in the free version</p>
-    </div>
-</div>
-
-<h2>Links</h2>
-<div class="links">
-    <a href="privacy.html" class="link-card">
-        <span class="emoji">🔒</span>
-        <div>
-            <div class="label">Privacy Policy</div>
-            <p class="desc">How we protect your data (spoiler: we don't collect any)</p>
-        </div>
-    </a>
-    <a href="support.html" class="link-card">
-        <span class="emoji">📬</span>
-        <div>
-            <div class="label">Support</div>
-            <p class="desc">FAQ and contact information</p>
-        </div>
-    </a>
-</div>
-
-<footer>
-    <p>OraKit &copy; 2026 Giuseppe Orabona (OraKit)</p>
-    <p>Made with ❤️ in Italy</p>
-    <p style="margin-top: 8px;">
-        <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a>
-    </p>
-</footer>
-
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Language"><strong>OraKit</strong><a href="it/" lang="it" hreflang="it">Italiano</a></nav>
+<main id="main">
+<header>
+<p class="eyebrow">PDF tools for iPhone</p>
+<h1>Your documents.<br>Ready to send.</h1>
+<p class="tagline">Turn photos into PDFs, bring documents together and reduce file size. Keep the tools you need to finish the job in one place.</p>
+<div class="app-store-btn"><a href="https://apps.apple.com/app/id6756546627">Download on the App Store</a></div>
+<p class="price-note">Free download · Includes ads and in-app purchases</p>
+</header>
+<section aria-labelledby="features"><h2 id="features">Less back and forth. More done.</h2><div class="feature-grid"><article class="feature-card"><span class="number">01</span><h3>Bring your pages together</h3><p>Scan a document, turn photos into a PDF, merge files and put pages in the right order.</p></article><article class="feature-card"><span class="number">02</span><h3>Finish before you send</h3><p>Compress a PDF, fill supported forms and add a drawn signature before sharing it.</p></article><article class="feature-card"><span class="number">03</span><h3>Keep what matters</h3><p>Organize documents in your Archive. Store private files in the encrypted Vault with biometric access on supported devices.</p></article></div></section>
+<section class="card" aria-labelledby="privacy"><h2 id="privacy" style="margin-top:0">Your documents stay in your hands.</h2><p>Core PDF tools and on-device text recognition process documents locally. The Vault encrypts the files you place inside it. Optional iCloud features, web tools, advertising and purchases use network services.</p><p><a href="privacy.html" style="color:var(--ocean)">Read the privacy policy</a></p></section>
+<section aria-labelledby="faq"><h2 id="faq">Before you download</h2><details><summary>Is OraKit free?</summary><p>You can download OraKit for free. The free version includes ads; some advanced tools require Pro or an available rewarded video unlock. Check the app for current access options and prices.</p></details><details><summary>Does everything work offline?</summary><p>Many document tools work on your device. Features that retrieve web content, iCloud services, advertising and App Store purchases require a connection.</p></details><details><summary>What kind of signature can I add?</summary><p>You can draw a signature and place it on a PDF. This is not a qualified digital signature service.</p></details><details><summary>Can every PDF be reduced to any size?</summary><p>No. The result depends on the document and its contents. Compression can affect quality; inspect your PDF before sending it.</p></details></section>
+<div style="margin-top:40px"><div class="app-store-btn"><a href="https://apps.apple.com/app/id6756546627">Download on the App Store</a></div></div>
+<p class="price-note">Free download · Includes ads and in-app purchases</p>
+</main>
+<footer><p>Made in Italy for the documents you handle every day.</p><p><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p><p>© 2026 Giuseppe Orabona</p></footer>
 </body>
 </html>
