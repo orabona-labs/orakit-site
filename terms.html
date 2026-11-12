@@ -102,10 +102,32 @@
         footer a { color: var(--ocean); text-decoration: none; }
         a { color: var(--ocean); }
         strong { font-weight: 600; }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .lang-switch a {
+            color: var(--ocean);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .lang-switch a:hover { background: rgba(26, 110, 237, 0.08); }
+        .lang-switch a.active { background: rgba(26, 110, 237, 0.12); }
+        #en { display: none; }
     </style>
 </head>
 <body>
 
+<div class="lang-switch">
+    <a href="#" data-lang="it" class="active" onclick="showLang('it'); return false;">🇮🇹 Italiano</a>
+    <span style="color:var(--secondary)">&nbsp;·&nbsp;</span>
+    <a href="#" data-lang="en" onclick="showLang('en'); return false;">🇬🇧 English</a>
+</div>
+<div id="it">
 <div class="icon">📋</div>
 <h1>Termini e Condizioni d'Uso</h1>
 <p class="subtitle">OraKit – PDF &amp; File Tools &nbsp;·&nbsp; Ultimo aggiornamento: novembre 2026</p>
@@ -190,6 +212,94 @@
     <strong>Nota:</strong> Questi termini integrano, ma non sostituiscono, i termini EULA standard di Apple. In caso di conflitto, prevalgono i termini EULA standard di Apple.
 </div>
 
+</div>
+<div id="en">
+<div class="icon">📋</div>
+<h1>Terms of Use</h1>
+<p class="subtitle">OraKit – PDF &amp; File Tools &nbsp;·&nbsp; Last updated: November 2026</p>
+
+<p>These Terms of Use ("EULA") govern your use of the mobile application <strong>OraKit – PDF &amp; File Tools</strong> (the "App"). By downloading, installing or using the App you accept these terms.</p>
+
+<h2>1. Acceptance of the Terms</h2>
+<p>If you do not accept these terms, do not use the App. Continued use of the App after any change constitutes acceptance of that change.</p>
+
+<h2>2. License</h2>
+<p>OraKit grants a limited, non-exclusive, non-transferable, revocable license to use the App solely for personal, non-commercial purposes.</p>
+<div class="card-highlight">
+    <strong>You may not:</strong>
+    <ul>
+        <li>Copy, modify, distribute or sell the App or any part of it</li>
+        <li>Reverse engineer, decompile or disassemble the App</li>
+        <li>Use the App for unlawful or unauthorized purposes</li>
+        <li>Remove copyright or proprietary notices</li>
+    </ul>
+</div>
+
+<h2>3. "Remove ads" purchase</h2>
+<div class="sub-box">
+    <h3>How it works</h3>
+    <ul>
+        <li>All OraKit tools are free; the free version shows advertising.</li>
+        <li><strong>Remove ads</strong> – a one-time purchase, with no renewal and no subscription, that removes advertising for good.</li>
+        <li>Alternatively, you can optionally watch a video to get one hour without ads.</li>
+    </ul>
+    <p style="margin-top:10px;color:rgba(255,255,255,0.85);font-size:14px;">Users with an active OraKit Premium subscription, or who bought the app while it was paid, will not see ads.</p>
+</div>
+
+<h2>3.1 Payment</h2>
+<p>Payment is charged to your Apple ID account when you confirm the purchase. The purchase is one-time and does not renew.</p>
+
+<h2>3.2 Restoring purchases</h2>
+<p>If you already bought "Remove ads" and reinstall the app or change device, you can restore the purchase with the "Restore purchase" button on the dedicated screen. Any active Premium subscriptions can be managed in <strong>Settings → [your name] → Subscriptions</strong> on iOS.</p>
+
+<h2>3.3 Refunds</h2>
+<p>Refunds are handled entirely by Apple under its own policy. To request one, visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
+
+<h2>4. Privacy and data protection</h2>
+<p>Use of the App is subject to our <a href="privacy.html?lang=en">Privacy Policy</a>. OraKit does not collect personal data about your files. The free version includes advertising through Google AdMob, subject to the required consents (ATT and, where applicable, GDPR). After the "Remove ads" purchase no advertising is requested or shown.</p>
+
+<h2>5. Intellectual property</h2>
+<p>OraKit – PDF &amp; File Tools and all its content (software, graphics, icons, text) are the exclusive property of Giuseppe Orabona and are protected by Italian and international copyright law.</p>
+
+<h2>6. Limitation of liability</h2>
+<p>The App is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the App is error-free or uninterrupted. To the extent permitted by law, we are not liable for loss of data or files (always keep a backup), errors or interruptions of the service, indirect or consequential damages, or problems arising from misuse of the App.</p>
+<div class="card-warning">
+    <strong>Secure Vault:</strong> If you lose your Vault password, files encrypted with AES-256-GCM cannot be recovered. Keep your password in a safe place.
+</div>
+
+<h2>7. Changes to the Terms</h2>
+<p>We may change these Terms at any time. Changes take effect immediately once published on this page.</p>
+
+<h2>8. Governing law</h2>
+<p>These Terms are governed by Italian law. Any dispute is subject to the exclusive jurisdiction of the Italian courts, without prejudice to mandatory consumer protection rules.</p>
+
+<h2>9. Contact</h2>
+<div class="card">
+    <p><strong>Developer:</strong> Giuseppe Orabona</p>
+    <p><strong>Email:</strong> <a href="mailto:giovanni.orabona@yahoo.com">giovanni.orabona@yahoo.com</a></p>
+    <p><strong>Support:</strong> <a href="support.html?lang=en">orabona-labs.github.io/orakit-site/support.html</a></p>
+</div>
+
+<h2>10. Apple Standard Terms (EULA)</h2>
+<p>In addition to these terms, use of OraKit is subject to Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Standard Licensed Application End User License Agreement</a>.</p>
+<div class="card-highlight">
+    <strong>Note:</strong> These terms supplement but do not replace Apple's standard EULA. In case of conflict, Apple's standard EULA prevails.
+</div>
+</div>
+<script>
+function showLang(lang){
+  document.getElementById('it').style.display = lang==='it' ? 'block' : 'none';
+  document.getElementById('en').style.display = lang==='en' ? 'block' : 'none';
+  document.querySelectorAll('.lang-switch a').forEach(function(a){a.classList.remove('active')});
+  document.querySelector('.lang-switch a[data-lang="'+lang+'"]').classList.add('active');
+  document.documentElement.lang = lang;
+}
+(function(){
+  var q=new URLSearchParams(location.search).get('lang');
+  var l=q||((navigator.language||'it').toLowerCase().indexOf('it')===0?'it':'en');
+  if(l!=='it'){showLang('en');}
+})();
+</script>
 <footer>
     <p><strong>OraKit – PDF &amp; File Tools</strong></p>
     <p>© 2026 Giuseppe Orabona. Tutti i diritti riservati.</p>

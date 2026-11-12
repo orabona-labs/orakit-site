@@ -290,5 +290,12 @@
     <p>Made with ❤️ in Italy</p>
 </footer>
 
+<script>
+(function(){
+  var q=new URLSearchParams(location.search).get('lang');
+  var l=q||((navigator.language||'it').toLowerCase().indexOf('it')===0?'it':'en');
+  if(l!=='it'&&typeof showLang==='function'){showLang('en');}
+})();
+</script>
 </body>
 </html>
